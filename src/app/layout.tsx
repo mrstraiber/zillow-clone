@@ -2,8 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Zillow Clone',
-  description: '',
+  title: {
+    default: 'Zillow Clone',
+    template: '%s',
+  },
+  description: 'Real Estate Marketplace',
 };
 
 export default function RootLayout({
