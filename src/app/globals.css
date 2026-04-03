@@ -1,5 +1,5 @@
 @import 'tailwindcss';
-@theme {
-  --font-inter: 'Inter', sans-serif;
-  --font-object: 'Object Sans', sans-serif;
+@theme inline {
+  --font-inter: var(--font-inter), sans-serif;
+  --font-object: var(--font-object), sans-serif;
 }
