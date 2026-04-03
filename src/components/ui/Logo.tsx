@@ -2,7 +2,7 @@ interface LogoProps {
   className?: string;
 }
 
-export default function Logo({ className }: LogoProps) {
+export default function Logo({ className = 'max-w-full h-6' }: LogoProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
