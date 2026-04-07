@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import ErrorMessage from '@/components/ui/ErrorMessage';
 
@@ -11,29 +11,35 @@ export default function EmailLoginForm() {
   // regex patterns for validating email and password inputs
   const emailsRegex: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  // on page Load ,check if there is an email in sessionStorage and set it to the email state
+  useEffect(() => {
+    const savedEmail = sessionStorage.getItem('loginEmail');
+    if (savedEmail) {
+      setEmail(savedEmail);
+      setBtnIsDisabled(false);
+    }
+  }, []);
+
   // handle form submission
-  function handleEmailSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function handleContinue(e: React.FormEvent<HTMLFormElement>) {
     // prevent the page from refreshing on submit
     e.preventDefault();
 
     // check if the email is valid using the regex pattern
     if (emailsRegex.test(email)) {
-      setEmailError(false);
-      redirectToPasswordPage();
+      // set the button disabled to true when the email is valid
+      setBtnIsDisabled(true);
+
+      // Save email to sessionStorage
+      sessionStorage.setItem('loginEmail', email);
+
+      // add a delay of 1 seconds before navigating to the password page
+      setTimeout(() => {
+        router.push(`/login/password`);
+      }, 1000);
     } else {
       setEmailError(true);
-      return;
     }
-  }
-
-  function redirectToPasswordPage() {
-    // set the button disabled to true if the email is valid
-    setBtnIsDisabled(true);
-
-    // add a delay of 1.5 seconds before redirecting to the password page to allow the user to see the success message
-    setTimeout(() => {
-      router.push(`/login/password?email=${email}`);
-    }, 1500);
   }
 
   // handle email input change
@@ -56,15 +62,16 @@ export default function EmailLoginForm() {
   }
 
   return (
-    <form className="flex flex-col" onSubmit={handleEmailSubmit}>
+    <form className="flex flex-col" onSubmit={handleContinue} method="POST">
       <h3 className="font-object text-xl mb-10">Sign in</h3>
       <input
         type="text"
-        id="singin"
+        id="email-input"
         className="rounded-lg border py-4 px-3 w-full"
         placeholder="Email Address"
         value={email}
         onChange={handleEmailChange}
+        onKeyDown={(e) => e.key === 'Enter' && handleContinue}
       />
 
       {emailError && ErrorMessage({ message: 'Please enter a valid email address' })}
