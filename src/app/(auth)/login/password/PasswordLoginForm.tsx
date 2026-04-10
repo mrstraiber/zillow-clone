@@ -14,11 +14,6 @@ export default function PasswordLoginForm() {
     if (!email) router.push(`/login/identifier`);
   }, [router, email]);
 
-  // update the page title
-  useEffect(() => {
-    document.title = 'Enter your password';
-  }, []);
-
   // handle password input change
   function handlePasswordChange(e: React.ChangeEvent<HTMLInputElement>) {
     setPassword(e.target.value.trim());
