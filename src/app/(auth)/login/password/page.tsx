@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import PasswordLoginForm from './PasswordLoginForm';
 import AuthLogin from '@/components/layout/AuthLogin';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Enter your password',
+};
 
 export default function Password() {
   return (
