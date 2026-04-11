@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import ErrorMessage from '@/components/ui/ErrorMessage';
+import Button from '@/components/ui/Button';
 
 export default function EmailLoginForm() {
   const [email, setEmail] = useState<string>('');
@@ -77,14 +78,7 @@ export default function EmailLoginForm() {
       {emailError && ErrorMessage({ message: 'Please enter a valid email address' })}
 
       <div className="my-5">
-        <button
-          disabled={btnIsDisabled}
-          className="w-full rounded-lg bg-[#0041d9] py-3 px-4 text-white font-black cursor-pointer disabled:cursor-not-allowed disabled:opacity-50"
-          type="submit"
-          id="signin-button"
-        >
-          Continue
-        </button>
+        <Button isDisabled={btnIsDisabled}>Continue</Button>
       </div>
     </form>
   );

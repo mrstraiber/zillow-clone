@@ -2,11 +2,12 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Button from '@/components/ui/Button';
 
 export default function PasswordLoginForm() {
   const [password, setPassword] = useState<string>('');
   const [hidePassword, setHidePassword] = useState<boolean>(true);
-  const email: string = sessionStorage.getItem('loginEmail') || '';
+  const email: string | null = sessionStorage.getItem('loginEmail');
   const router = useRouter();
 
   // on page Load if email is not found in sessionStorage navigate back to the email login page
@@ -33,7 +34,7 @@ export default function PasswordLoginForm() {
             type="text"
             id="email"
             className="p-3 w-full outline-none"
-            value={email}
+            value={email ? email : ''}
             readOnly={true}
           />
           <span className="flex items-center px-3 text-md text-[#0041d9] cursor-pointer">
@@ -94,12 +95,7 @@ export default function PasswordLoginForm() {
       </div>
 
       <div className="my-5">
-        <button
-          className="w-full rounded-xl bg-[#0041d9] py-3 px-4 text-white font-black cursor-pointer"
-          type="submit"
-        >
-          Continue
-        </button>
+        <Button>Continue</Button>
       </div>
     </form>
   );
