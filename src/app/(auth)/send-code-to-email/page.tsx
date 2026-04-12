@@ -2,6 +2,7 @@ import AuthLogin from '@/components/layout/AuthLogin';
 import SendCodeToEmailForm from './SendCodeToEmailForm';
 import Link from 'next/link';
 import { Metadata } from 'next';
+import Logo from '@/components/ui/Logo';
 
 export const metadata: Metadata = {
   title: 'Check your email',
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
 export default function SendCodeToEmail() {
   return (
     <AuthLogin>
+      <Logo />
       <SendCodeToEmailForm />
       <div className="mt-15">
         <div className="flex items-center my-5">
