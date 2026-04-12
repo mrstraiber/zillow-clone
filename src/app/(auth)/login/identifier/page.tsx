@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import EmailLoginForm from './EmailLoginForm';
 import AuthLogin from '@/components/layout/AuthLogin';
+import Logo from '@/components/ui/Logo';
 
 export default function Login() {
   return (
     <AuthLogin>
+      <Logo />
       <EmailLoginForm />
       <div className="flex max-[244px]:flex-col sm:flex-row text-sm">
         <p>New to Zillow?</p>
