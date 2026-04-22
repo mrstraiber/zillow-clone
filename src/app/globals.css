@@ -2,4 +2,5 @@
 @theme inline {
   --font-inter: var(--font-inter), sans-serif;
   --font-object: var(--font-object), sans-serif;
+  --color-blue-custom: #0041d9;
 }
