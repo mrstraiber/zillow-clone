@@ -20,7 +20,7 @@ export default function PasswordRegisterForm() {
   const isUpperCase: boolean = passwordArray.some((input) => input >= 'A' && input <= 'Z');
   const isLowerCase: boolean = passwordArray.some((input) => input >= 'a' && input <= 'z');
   const isNumber: boolean = passwordArray.some((input) => input >= '0' && input <= '9');
-  const isSpecial: boolean = true;
+  const isSpecial: boolean = passwordArray.some((input) => '!@#$%^&*)'.includes(input));
 
   // filtre how many booloan value are true ?
   const trueCount: number = [isUpperCase, isLowerCase, isNumber, isSpecial].filter(Boolean).length;
