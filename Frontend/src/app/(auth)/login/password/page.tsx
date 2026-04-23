@@ -2,7 +2,7 @@ import Link from 'next/link';
 import PasswordLoginForm from './PasswordLoginForm';
 import AuthLogin from '@/components/layout/AuthLogin';
 import { Metadata } from 'next';
-import Logo from '@/components/ui/Logo';
+import Logo from '@/components/layout/Logo';
 
 export const metadata: Metadata = {
   title: 'Enter your password',
@@ -15,7 +15,7 @@ export default function Password() {
       <PasswordLoginForm />
       <div className="flex max-[244px]:flex-col sm:flex-row text-sm">
         <p>New to Zillow?</p>
-        <Link href="/register" className="text-[#0041d9] ml-2">
+        <Link href="/signup/identifier" className="text-[#0041d9] ml-2">
           <strong>Create account</strong>
         </Link>
       </div>
