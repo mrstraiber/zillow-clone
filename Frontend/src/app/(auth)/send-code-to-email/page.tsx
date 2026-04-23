@@ -2,7 +2,7 @@ import AuthLogin from '@/components/layout/AuthLogin';
 import SendCodeToEmailForm from './SendCodeToEmailForm';
 import Link from 'next/link';
 import { Metadata } from 'next';
-import Logo from '@/components/ui/Logo';
+import Logo from '@/components/layout/Logo';
 
 export const metadata: Metadata = {
   title: 'Check your email',

@@ -1,15 +1,12 @@
 import AuthLogin from '@/components/layout/AuthLogin';
 import ForgotPasswordForm from './ForgotPassword';
-import Link from 'next/link';
+import Logo from '@/components/layout/Logo';
+
 export default function ForgotPassword() {
   return (
     <AuthLogin>
+      <Logo />
       <ForgotPasswordForm />
-      <p>
-        <Link href="/login/password" className="text-[#0041d9]">
-          <strong className="text-sm">Back to sign in</strong>
-        </Link>
-      </p>
     </AuthLogin>
   );
 }
