@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import EmailLoginForm from './EmailLoginForm';
 import AuthLogin from '@/components/layout/AuthLogin';
-import Logo from '@/components/ui/Logo';
+import Logo from '@/components/layout/Logo';
 
 export default function Login() {
   return (
@@ -10,7 +10,7 @@ export default function Login() {
       <EmailLoginForm />
       <div className="flex max-[244px]:flex-col sm:flex-row text-sm">
         <p>New to Zillow?</p>
-        <Link href="/register" className="text-[#0041d9] ml-2">
+        <Link href="/signup/identifier" className="text-blue-custom ml-2">
           <strong>Create account</strong>
         </Link>
       </div>
@@ -24,7 +24,7 @@ export default function Login() {
       <div className="flex max-[285px]:flex-col sm:flex-row text-xs">
         <p>By submitting, I accept Zillow&apos;s</p>
         <Link href="/terms">
-          <strong className="ml-1 text-[#0041d9]">terms of use</strong>
+          <strong className="ml-1 text-blue-custom">terms of use</strong>
         </Link>
       </div>
     </AuthLogin>
