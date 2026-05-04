@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
 import SuccessMessage from '@/components/ui/SuccessMessage';
-import EmailInputReadOnly from '@/components/ui/EmailInputReadOnly';
+import EmailInputReadOnly from '@/components/ui/Auth/EmailInputReadOnly';
 
 export default function SendCodeToEmailForm() {
   const [digitCode, setDigitCode] = useState<string>('');
