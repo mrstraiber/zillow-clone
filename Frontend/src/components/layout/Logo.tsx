@@ -6,7 +6,7 @@ interface LogoProps {
 
 export default function Logo({ className = 'max-w-full h-6' }: LogoProps) {
   return (
-    <div className="my-5">
+    <div className="my-5 w-fit">
       <Link href="/">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -15,7 +15,7 @@ export default function Password() {
       <PasswordLoginForm />
       <div className="flex max-[244px]:flex-col sm:flex-row text-sm">
         <p>New to Zillow?</p>
-        <Link href="/signup/identifier" className="text-[#0041d9] ml-2">
+        <Link href="/signup/identifier" className="text-blue-custom ml-2">
           <strong>Create account</strong>
         </Link>
       </div>
@@ -24,7 +24,7 @@ export default function Password() {
       </div>
       <div>
         <Link href="/send-code-to-email">
-          <strong className="text-[#0041d9] text-sm">Or send a secure code to your email</strong>
+          <strong className="text-blue-custom text-sm">Or send a secure code to your email</strong>
         </Link>
       </div>
     </AuthLogin>

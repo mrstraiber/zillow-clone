@@ -19,7 +19,7 @@ export default function SendCodeToEmail() {
         </div>
         <div>
           <Link href="/login/password">
-            <strong className="text-[#0041d9] text-sm">Or enter a password</strong>
+            <strong className="text-blue-custom text-sm">Or enter a password</strong>
           </Link>
         </div>
       </div>

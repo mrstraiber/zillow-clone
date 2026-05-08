@@ -1,7 +1,7 @@
 'use client';
 
 import ErrorMessage from '@/components/ui/ErrorMessage';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import EmailLogoSvg from '@/components/svg/EmailLogoSvg';
 import SuccessMessage from '@/components/ui/SuccessMessage';
@@ -40,11 +40,6 @@ export default function ForgotPasswordForm() {
       setResendEmailSuccess(false);
     }, 3000);
   }
-
-  // update the page title
-  useEffect(() => {
-    document.title = 'Forgot your password?';
-  }, []);
 
   return (
     <>
