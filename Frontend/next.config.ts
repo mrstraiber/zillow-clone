@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
-      // background image url for login page
+      // background image url for Auth page
       {
         protocol: 'https',
         hostname: 'delivery.digitalassets.zillowgroup.com',
@@ -16,7 +16,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.zillowstatic.com',
+        hostname: 'zillowstatic.com',
         port: '',
         pathname: '**',
       },

@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function Sidebar() {
   return (
-    <div className="sticky h-screen min-w-fit text-center bg-gray-100 border-t border-r border-[#cdcdd3]">
-      <div className="flex flex-row lg:flex-col items-center justify-center p-2 gap-4">
+    <div className="sticky top-0 md:h-screen md:min-w-fit text-center bg-white border-t md:border-r border-[#cdcdd3]">
+      <div className="flex flex-row md:flex-col justify-between items-center p-2 gap-4">
         <Link href="/homes" className="group">
           <div className="flex flex-row lg:flex-col items-center">
-            <div className="p-2">
+            <div className="p-2 m-0.5 rounded-xl group-hover:bg-blue-custom/5">
               <svg
                 viewBox="0 0 32 32"
                 aria-hidden="true"
@@ -28,7 +28,7 @@ export default function Sidebar() {
         </Link>
         <Link href="/myzillow/saved-search" className="group">
           <div className="flex flex-row lg:flex-col items-center">
-            <div className="p-2">
+            <div className="p-2 m-0.5 rounded-xl group-hover:bg-blue-custom/5">
               <svg
                 viewBox="0 0 32 32"
                 aria-hidden="true"
@@ -42,12 +42,14 @@ export default function Sidebar() {
                 ></path>
               </svg>
             </div>
-            <span className="text-[10px] font-semibold group-hover:text-blue-custom">Updates</span>
+            <span className="text-[10px] font-semibold group-hover:text-blue-custom text-[#535364]">
+              Updates
+            </span>
           </div>
         </Link>
         <Link href="/myzillow/favorites" className="group">
           <div className="flex flex-row lg:flex-col items-center">
-            <div className="p-2">
+            <div className="p-2 m-0.5 rounded-xl group-hover:bg-blue-custom/5">
               <svg
                 viewBox="0 0 32 32"
                 aria-hidden="true"
@@ -61,14 +63,14 @@ export default function Sidebar() {
                 ></path>
               </svg>
             </div>
-            <span className="text-[10px] font-semibold group-hover:text-blue-custom">
+            <span className="text-[10px] font-semibold group-hover:text-blue-custom text-[#535364]">
               Favorites
             </span>
           </div>
         </Link>
         <Link href="/homeloans" className="group">
           <div className="flex flex-row lg:flex-col items-center">
-            <div className="p-2">
+            <div className="p-2 m-0.5 rounded-xl group-hover:bg-blue-custom/5">
               <svg
                 viewBox="0 0 32 32"
                 aria-hidden="true"
@@ -82,14 +84,14 @@ export default function Sidebar() {
                 ></path>
               </svg>
             </div>
-            <span className="text-[10px] font-semibold group-hover:text-blue-custom">
+            <span className="text-[10px] font-semibold group-hover:text-blue-custom text-[#535364]">
               Home Loans
             </span>
           </div>
         </Link>
         <Link href="/myzillow/inbox" className="group">
           <div className="flex flex-row lg:flex-col items-center">
-            <div className="p-2">
+            <div className="p-2 m-0.5 rounded-xl group-hover:bg-blue-custom/5">
               <svg
                 viewBox="0 0 32 32"
                 aria-hidden="true"
@@ -103,7 +105,9 @@ export default function Sidebar() {
                 ></path>
               </svg>
             </div>
-            <span className="text-[10px] font-semibold group-hover:text-blue-custom">Inbox</span>
+            <span className="text-[10px] font-semibold group-hover:text-blue-custom text-[#535364]">
+              Inbox
+            </span>
           </div>
         </Link>
       </div>
