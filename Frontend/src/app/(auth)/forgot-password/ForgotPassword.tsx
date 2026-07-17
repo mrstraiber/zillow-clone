@@ -1,10 +1,11 @@
 'use client';
 
 import ErrorMessage from '@/components/ui/ErrorMessage';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
-import EmailLogoSvg from '@/components/ui/EmailLogoSvg';
+import EmailLogoSvg from '@/components/svg/EmailLogoSvg';
 import SuccessMessage from '@/components/ui/SuccessMessage';
+import Logo from '@/components/layout/Logo';
 
 export default function ForgotPasswordForm() {
   const [email, setEmail] = useState<string>(() => sessionStorage.getItem('Email') || '');
@@ -40,11 +41,6 @@ export default function ForgotPasswordForm() {
     }, 3000);
   }
 
-  // update the page title
-  useEffect(() => {
-    document.title = 'Forgot your password?';
-  }, []);
-
   return (
     <>
       {formIsSubmited ? (
@@ -78,6 +74,7 @@ export default function ForgotPasswordForm() {
         </div>
       ) : (
         <>
+          <Logo />
           <form action="POST" className="flex flex-col" onSubmit={handleSubmitForm}>
             <div className="mb-8 mt-2">
               <h3 className="font-object text-xl mb-4">Forgot your password?</h3>
@@ -102,7 +99,7 @@ export default function ForgotPasswordForm() {
 
             <div className="my-4">
               <button
-                className="w-full rounded-xl bg-[#0041d9] py-3 px-4 text-white font-bold cursor-pointer"
+                className="w-full rounded-xl bg-blue-custom py-3 px-4 text-white font-bold cursor-pointer"
                 type="submit"
               >
                 Continue
@@ -110,7 +107,7 @@ export default function ForgotPasswordForm() {
             </div>
           </form>
           <p>
-            <Link href="/login/password" className="text-[#0041d9]">
+            <Link href="/login/password" className="text-blue-custom">
               <strong className="text-sm">Back to sign in</strong>
             </Link>
           </p>

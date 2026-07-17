@@ -4,3 +4,22 @@
   --font-object: var(--font-object), sans-serif;
   --color-blue-custom: #0041d9;
 }
+
+.page-layout {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'sidebar main'
+    'sidebar footer';
+  grid-template-columns: 78px 1fr;
+}
+
+@layer components {
+  .input-field {
+    @apply rounded-xl border my-1 py-2 px-3 w-full border-[#cdcdd3] bg-[#f7f7f7] focus-within:outline-2 focus-within:outline-blue-custom outline-offset-[1.5px] focus-within:transition focus-within:duration-100 focus-within:ease-in-out hover:border-blue-custom focus-within:border-blue-custom;
+  }
+
+  .custom-button {
+    @apply relative before:absolute before:bottom-0 before:left-0 before:right-0 before:h-1 before:bg-blue-custom before:transition-all before:duration-300 before:ease-in-out before:rounded-r-lg before:rounded-l-lg;
+  }
+}

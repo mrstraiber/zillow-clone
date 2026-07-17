@@ -4,12 +4,19 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactCompiler: true,
 
-  // background image url for login page
   images: {
+    formats: ['image/avif', 'image/webp'],
     remotePatterns: [
+      // background image url for Auth page
       {
         protocol: 'https',
         hostname: 'delivery.digitalassets.zillowgroup.com',
+        port: '',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'zillowstatic.com',
         port: '',
         pathname: '**',
       },

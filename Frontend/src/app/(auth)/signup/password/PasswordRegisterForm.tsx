@@ -1,10 +1,10 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import PasswordInput from '@/components/ui/PasswordInput';
+import PasswordInput from '@/components/ui/Auth/PasswordInput';
 import Button from '@/components/ui/Button';
-import PasswordCheckList from '@/components/ui/PasswordCheckList';
-import EmailInputReadOnly from '@/components/ui/EmailInputReadOnly';
+import PasswordCheckList from '@/components/ui/Auth/PasswordCheckList';
+import EmailInputReadOnly from '@/components/ui/Auth/EmailInputReadOnly';
 
 export default function PasswordRegisterForm() {
   const [password, setPassword] = useState<string>('');

@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Button from '@/components/ui/Button';
-import EmailInputReadOnly from '@/components/ui/EmailInputReadOnly';
-import PasswordInput from '@/components/ui/PasswordInput';
+import EmailInputReadOnly from '@/components/ui/Auth/EmailInputReadOnly';
+import PasswordInput from '@/components/ui/Auth/PasswordInput';
 
 export default function PasswordLoginForm() {
   const [password, setPassword] = useState<string>('');
@@ -44,7 +44,7 @@ export default function PasswordLoginForm() {
       </div>
 
       <div className="flex max-[244px]:flex-col sm:flex-row text-sm">
-        <Link href="/forgot-password" className="text-[#0041d9] mt-5">
+        <Link href="/forgot-password" className="text-blue-custom mt-5">
           <p>
             <strong>Forgot password?</strong>
           </p>
